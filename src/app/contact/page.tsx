@@ -41,12 +41,14 @@ export default function ContactForm() {
         >
           <ArrowLeft className="mr-2" size={25} />
         </Link>
-        <h2 className="text-3xl font-bold">Contactate con nosotros</h2>
+        <h2 className="text-3xl font-bold mds:text-2xl">
+          Contactate con nosotros
+        </h2>
       </div>
 
       <div className="flex flex-col md:flex-row gap-8">
         <div className="w-full md:w-1/2">
-          <h2 className="text-xl font-semibold mb-6">
+          <h2 className="text-xl font-semibold mb-6 mds:text-lg">
             Pongámonos en contacto.
           </h2>
           <form action={FormAction} className="space-y-4">
@@ -55,7 +57,7 @@ export default function ContactForm() {
                 htmlFor="name"
                 className="block text-sm font-medium text-gray-700"
               >
-                Nombre Completo*
+                Nombre Completo
               </label>
               <Input
                 type="text"
@@ -84,7 +86,7 @@ export default function ContactForm() {
                 htmlFor="email"
                 className="block text-sm font-medium text-gray-700 mb-1"
               >
-                Email*
+                Email
               </label>
               <Input
                 type="email"
@@ -99,7 +101,7 @@ export default function ContactForm() {
                 htmlFor="phone"
                 className="block text-sm font-medium text-gray-700 mb-1"
               >
-                Teléfono*
+                Teléfono
               </label>
               <Input
                 type="tel"
@@ -114,7 +116,7 @@ export default function ContactForm() {
                 htmlFor="service"
                 className="block text-sm font-medium text-gray-700 mb-1"
               >
-                Tipo de Servicio*
+                Tipo de Servicio
               </label>
               <Select name="service" required>
                 <SelectTrigger>
@@ -131,7 +133,7 @@ export default function ContactForm() {
                 htmlFor="message"
                 className="block text-sm font-medium text-gray-700 mb-1"
               >
-                Mensajes*
+                Mensajes
               </label>
               <Textarea
                 id="message"
@@ -147,7 +149,7 @@ export default function ContactForm() {
           </form>
         </div>
 
-        <div className="w-full flex items-center justify-center md:w-1/2">
+        <div className="w-full flex items-center justify-center md:w-1/2 custom:hidden">
           <Image
             src="/contact-image-2.png"
             alt="Cleaning professional mopping a floor"

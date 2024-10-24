@@ -19,7 +19,7 @@ const HeroSection = () => {
             </Button>
           </Link>
         </div>
-        <div className="fixed flex items-end justify-end px-12 right-12 z-40 mds:right-0">
+        <div className="fixed flex items-end justify-end px-12 right-12 z-40 mds:right-0 mds:px-4">
           <Link href={"https://wa.me/+5491170659637"}>
             <Button
               size="icon"
