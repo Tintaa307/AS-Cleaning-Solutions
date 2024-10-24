@@ -14,7 +14,7 @@ const HeroSection = () => {
             ambientes profesionales
           </h1>
           <Link href={"#Contact"}>
-            <Button className="text-lg h-14 px-5 mds:h-12">
+            <Button className="text-lg h-14 px-5 mds:h-12 mt-4">
               Contáctate con nosotros
             </Button>
           </Link>
