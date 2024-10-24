@@ -129,6 +129,7 @@ export default function Navbar() {
             {navItems.map((item, index) => (
               <li key={index} className="">
                 <Link
+                  onClick={() => setIsMenuOpen(false)}
                   href={item.href}
                   className="text-black text-xl font-semibold hover:underline hover:underline-offset-4 decoration-primary decoration-2 transition-all duration-150"
                 >
@@ -138,7 +139,9 @@ export default function Navbar() {
             ))}
           </ul>
           <div className="flex-1 flex items-center justify-center">
-            <Button className="w-1/2 mt-8">Contactate</Button>
+            <Link onClick={() => setIsMenuOpen(false)} href={"#Contact"}>
+              <Button className="w-1/2 mt-8">Contactate</Button>
+            </Link>
           </div>
         </div>
       </aside>
