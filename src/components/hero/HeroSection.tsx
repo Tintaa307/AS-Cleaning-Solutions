@@ -1,6 +1,7 @@
 import React from "react"
 import { Button } from "../ui/button"
 import { IconBrandWhatsapp } from "@tabler/icons-react"
+import Link from "next/link"
 
 const HeroSection = () => {
   return (
@@ -17,12 +18,14 @@ const HeroSection = () => {
           </Button>
         </div>
         <div className="fixed flex items-end justify-end px-12 right-12 z-40 mds:right-0">
-          <Button
-            size="icon"
-            className="bg-white h-14 w-14 rounded-full hover:bg-white hover:bg-opacity-80 shadow-2xl border border-border services_sm:h-12 services_sm:w-12 services_sm:text-sm"
-          >
-            <IconBrandWhatsapp size={40} className="text-primary" />
-          </Button>
+          <Link href={"https://wa.me/+56970659637"}>
+            <Button
+              size="icon"
+              className="bg-white h-14 w-14 rounded-full hover:bg-white hover:bg-opacity-80 shadow-2xl border border-border services_sm:h-12 services_sm:w-12 services_sm:text-sm"
+            >
+              <IconBrandWhatsapp size={40} className="text-primary" />
+            </Button>
+          </Link>
         </div>
       </article>
     </main>
