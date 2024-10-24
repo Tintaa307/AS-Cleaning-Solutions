@@ -63,7 +63,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="https://www.facebook.com/ascleaningsolutions"
+                  href="https://www.instagram.com/cleaningas.com"
                   className="text-gray-600 hover:text-blue-600 flex items-center"
                 >
                   <IconBrandInstagram size={23} className="mr-2" />
@@ -72,7 +72,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://www.instagram.com/cleaningas.com"
+                  href="#"
                   className="text-gray-600 hover:text-blue-600 flex items-center"
                 >
                   <IconMail size={22} className="mr-2" />
