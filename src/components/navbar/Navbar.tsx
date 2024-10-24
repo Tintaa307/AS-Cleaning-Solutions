@@ -142,7 +142,7 @@ export default function Navbar() {
             <Link
               className="w-1/2 mt-8"
               onClick={() => setIsMenuOpen(false)}
-              href={"#Contact"}
+              href={"/contact"}
             >
               <Button className="w-full">Contactate</Button>
             </Link>
