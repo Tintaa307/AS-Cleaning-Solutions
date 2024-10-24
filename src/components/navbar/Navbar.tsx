@@ -56,7 +56,7 @@ export default function Navbar() {
       >
         <div className="container mx-auto px-4 py-4 flex justify-between items-center custom:max-w-full">
           <Link href="/" className="flex items-center space-x-2">
-            <Image src={"/Logo-AS-1.svg"} alt="logo" width={160} height={110} />
+            <Image src={"/logo-as-2.png"} alt="logo" width={160} height={110} />
           </Link>
           <div className="hidden lg:flex items-center space-x-10">
             {navItems.map((item, index) => (

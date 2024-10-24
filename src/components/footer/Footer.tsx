@@ -62,25 +62,28 @@ export default function Footer() {
             <h3 className="font-bold text-lg mb-4">Contáctanos</h3>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="https://www.instagram.com/cleaningas.com"
+                <Link
+                  target="_blank"
+                  href="https://www.instagram.com/as.cleaningsolutions.com"
                   className="text-gray-600 hover:text-blue-600 flex items-center"
                 >
                   <IconBrandInstagram size={23} className="mr-2" />
                   @as.cleaningsolutions
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
+                  target="_blank"
                   href="#"
                   className="text-gray-600 hover:text-blue-600 flex items-center"
                 >
                   <IconMail size={22} className="mr-2" />
                   @cleaningas.com
-                </a>
+                </Link>
               </li>
               <li>
                 <Link
+                  target="_blank"
                   href="tel:+56912345678"
                   className="text-gray-600 hover:text-blue-600 flex items-center"
                 >

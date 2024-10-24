@@ -7,9 +7,9 @@ const HeroSection = () => {
   return (
     <main id="Hero" className="relative h-screen bg-[url('/hero-image.png')]">
       <div className="absolute top-0 left-0 w-full h-screen bg-black bg-opacity-30" />
-      <article className="absolute bottom-0 w-full h-[40vh] flex items-center justify-between">
-        <div className="flex-1 px-12 space-y-8 custom:flex custom:flex-col custom:items-center custom:justify-center services_sm:px-4">
-          <h1 className="text-white text-6xl font-bold leading-snug custom:text-center hero:text-5xl hero:leading-[1.4] mds:hero:text-4xl services_sm:text-xl">
+      <article className="absolute bottom-0 w-full h-[40vh] flex items-center justify-center">
+        <div className="w-[82%] space-y-8 flex items-start flex-col custom:items-center custom:justify-center services_sm:px-4 hero_lg:w-full hero_lg:px-8">
+          <h1 className="text-white text-6xl font-bold leading-snug custom:text-center hero:text-5xl hero:leading-[1.4] mds:hero:text-4xl services_sm:text-3xl">
             Soluciones integrales para <br />
             ambientes profesionales
           </h1>
