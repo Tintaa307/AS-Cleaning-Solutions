@@ -113,6 +113,7 @@ export default function Navbar() {
           "fixed top-0 left-0 w-full h-screen bg-white z-50 -translate-x-full transition-all duration-150",
           {
             "translate-x-0 transition-all duration-150": isMenuOpen,
+            "-translate-x-full transition-all duration-150": !isMenuOpen,
           }
         )}
       >
@@ -138,8 +139,12 @@ export default function Navbar() {
             ))}
           </ul>
           <div className="flex-1 flex items-center justify-center">
-            <Link onClick={() => setIsMenuOpen(false)} href={"#Contact"}>
-              <Button className="w-1/2 mt-8">Contactate</Button>
+            <Link
+              className="w-1/2 mt-8"
+              onClick={() => setIsMenuOpen(false)}
+              href={"#Contact"}
+            >
+              <Button className="w-full">Contactate</Button>
             </Link>
           </div>
         </div>
