@@ -36,7 +36,7 @@ export default function Footer() {
                   href="#About"
                   className="text-gray-600 hover:text-blue-600"
                 >
-                  Conócenos
+                  Conocenos
                 </Link>
               </li>
               <li>
