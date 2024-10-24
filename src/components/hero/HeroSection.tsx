@@ -13,12 +13,14 @@ const HeroSection = () => {
             Soluciones integrales para <br />
             ambientes profesionales
           </h1>
-          <Button className="text-lg h-14 px-5 mds:h-12">
-            Contactanos con nosotros
-          </Button>
+          <Link href={"#Contact"}>
+            <Button className="text-lg h-14 px-5 mds:h-12">
+              Contáctate con nosotros
+            </Button>
+          </Link>
         </div>
         <div className="fixed flex items-end justify-end px-12 right-12 z-40 mds:right-0">
-          <Link href={"https://wa.me/+56970659637"}>
+          <Link href={"https://wa.me/+5491170659637"}>
             <Button
               size="icon"
               className="bg-white h-14 w-14 rounded-full hover:bg-white hover:bg-opacity-80 shadow-2xl border border-border services_sm:h-12 services_sm:w-12 services_sm:text-sm"
