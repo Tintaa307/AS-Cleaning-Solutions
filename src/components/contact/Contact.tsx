@@ -41,7 +41,7 @@ export default function ContactSection() {
   }
 
   return (
-    <section className="relative">
+    <section id="Contact" className="relative">
       <div className="absolute inset-0">
         <Image
           src="/contact-image.png"
@@ -53,11 +53,11 @@ export default function ContactSection() {
       </div>
       <div className="relative container mx-auto px-4 py-16 flex flex-col md:flex-row items-start custom:flex-col custom:items-center custom:justify-center custom:gap-6 custom:max-w-full">
         <div className="md:w-1/2 mb-8 md:mb-0">
-          <h2 className="text-4xl font-bold text-white mb-4 custom:text-center">
+          <h2 className="text-4xl font-bold text-white mb-4 custom:text-center services_sm:text-3xl">
             Contactate con nosotros
           </h2>
         </div>
-        <div className="md:w-1/2 mds:w-5/6">
+        <div className="md:w-1/2 mds:w-5/6 services_sm:w-[95%]">
           <form
             autoComplete="off"
             onSubmit={handleSubmit}

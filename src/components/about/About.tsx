@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { InfiniteMovingCards } from "../ui/infinite-moving-cards"
+import Link from "next/link"
 
 const clientLogos = [
   { name: "Logo 1", src: "/trusted-by/alliance-1.png?height=100&width=100" },
@@ -43,7 +44,7 @@ const qualities = [
 
 export default function AboutSection() {
   return (
-    <section className="py-16 ">
+    <section id="About" className="py-16 ">
       <div className="container mx-auto px-4 custom:max-w-full">
         <h2 className="text-2xl font-bold mb-8 text-center">
           Ya confiaron en nosotros:
@@ -64,7 +65,7 @@ export default function AboutSection() {
           </div>
 
           <div className="md:w-1/2 custom:w-2/3 mds:w-[90%]">
-            <h2 className="text-3xl font-bold mb-6 custom:text-center">
+            <h2 className="text-3xl font-bold mb-6 custom:text-center services_sm:text-3xl">
               Conocenos: Compromiso y Calidad en Cada Detalle
             </h2>
 
@@ -86,9 +87,11 @@ export default function AboutSection() {
               ))}
             </div>
 
-            <Button size="lg" className="mt-8 text-md">
-              Contáctanos
-            </Button>
+            <Link href={"#Contact"}>
+              <Button size="lg" className="mt-8 text-md">
+                Contáctanos
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

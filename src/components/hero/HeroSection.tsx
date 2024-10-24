@@ -4,7 +4,7 @@ import { IconBrandWhatsapp } from "@tabler/icons-react"
 
 const HeroSection = () => {
   return (
-    <main className="relative h-screen bg-[url('/hero-image.png')]">
+    <main id="Hero" className="relative h-screen bg-[url('/hero-image.png')]">
       <div className="absolute top-0 left-0 w-full h-screen bg-black bg-opacity-30" />
       <article className="absolute bottom-0 w-full h-[40vh] flex items-center justify-between">
         <div className="flex-1 px-12 space-y-8 custom:flex custom:flex-col custom:items-center custom:justify-center">
@@ -16,7 +16,7 @@ const HeroSection = () => {
             Contactanos con nosotros
           </Button>
         </div>
-        <div className="fixed flex items-end justify-end px-12 right-12">
+        <div className="fixed flex items-end justify-end px-12 right-12 z-40 mds:right-0">
           <Button
             size="icon"
             className="bg-white h-14 w-14 rounded-full hover:bg-white hover:bg-opacity-80 shadow-2xl border border-border"

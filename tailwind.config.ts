@@ -78,6 +78,7 @@ const config: Config = {
         custom: { max: "1025px" },
         mds: { max: "770px" },
         hero: { max: "830px" },
+        services_sm: { max: "536px" },
       },
     },
   },
