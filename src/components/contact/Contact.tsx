@@ -14,8 +14,8 @@ import {
 import { SelectValue } from "@radix-ui/react-select"
 import { handleSubmit } from "@/actions/contact-action"
 
-export default function ContactSection(formData: FormData) {
-  const FormAction = async (formData: any) => {
+export default function ContactSection() {
+  const FormAction = async (formData: FormData) => {
     const res = await handleSubmit(formData)
     switch (res.status) {
       case 200:

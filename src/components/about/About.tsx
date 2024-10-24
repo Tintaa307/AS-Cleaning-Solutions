@@ -72,26 +72,28 @@ export default function AboutSection() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mds:w-full">
               {qualities.map((quality) => (
                 <div key={quality.number} className="p-6 rounded-lg">
-                  <div className="flex items-center mb-4">
-                    <div className="bg-blue-300 text-white rounded-full w-16 h-16 flex items-center justify-center mr-3">
+                  <div className="flex items-center mb-4 mds:flex-col mds:justify-center mds:gap-4">
+                    <div className="bg-blue-300 text-white rounded-full w-16 h-16 flex items-center justify-center mr-3 mds:mr-0 mds:w-24 mds:h-24">
                       <span className="text-xl text-blue-600 font-bold">
                         {quality.number}
                       </span>
                     </div>
                     <h3 className="text-xl font-semibold">{quality.title}</h3>
                   </div>
-                  <p className="text-gray-600 font-medium">
+                  <p className="text-gray-600 font-medium mds:text-center">
                     {quality.description}
                   </p>
                 </div>
               ))}
             </div>
 
-            <Link href={"#Contact"}>
-              <Button size="lg" className="mt-8 text-md">
-                Contáctanos
-              </Button>
-            </Link>
+            <div className="flex-1 flex items-center justify-center">
+              <Link href={"#Contact"}>
+                <Button size="lg" className="mt-8 text-md">
+                  Contáctanos
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
