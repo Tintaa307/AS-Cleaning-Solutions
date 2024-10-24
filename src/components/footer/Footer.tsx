@@ -24,13 +24,16 @@ export default function Footer() {
             <h3 className="font-bold text-lg mb-4">Índice</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/" className="text-gray-600 hover:text-blue-600">
+                <Link
+                  href="#Hero"
+                  className="text-gray-600 hover:text-blue-600"
+                >
                   Inicio
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/conocenos"
+                  href="#About"
                   className="text-gray-600 hover:text-blue-600"
                 >
                   Conócenos
@@ -38,7 +41,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/servicios"
+                  href="#Services"
                   className="text-gray-600 hover:text-blue-600"
                 >
                   Servicios
@@ -46,7 +49,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/trabaja-con-nosotros"
+                  href="#Contact"
                   className="text-gray-600 hover:text-blue-600"
                 >
                   Trabaja con nosotros
@@ -77,13 +80,13 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a
+                <Link
                   href="tel:+56912345678"
                   className="text-gray-600 hover:text-blue-600 flex items-center"
                 >
                   <Phone size={22} className="mr-2" />
                   (+56) 9 7065 9637
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
