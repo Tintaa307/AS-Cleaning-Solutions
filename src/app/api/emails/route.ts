@@ -23,7 +23,7 @@ export async function POST(req: Request) {
 
     const { data: emailData, error } = await resend.emails.send({
       from: "A&S Cleaning Solutions <contact@solutionsas.com.ar>",
-      to: ["aa@cleaning.com"],
+      to: ["contacto@cleaningas.com"],
       subject: "Nuevo mensaje desde A&S Cleaning Solutions Website",
       react: EmailTemplate({
         name: name,
