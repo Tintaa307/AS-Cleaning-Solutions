@@ -85,7 +85,7 @@ export default function Footer() {
                   className="text-gray-600 hover:text-blue-600 flex items-center"
                 >
                   <Phone size={22} className="mr-2" />
-                  (+56) 9 7065 9637
+                  (+54) 9 11 7065 9637
                 </Link>
               </li>
             </ul>
