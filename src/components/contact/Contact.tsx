@@ -4,40 +4,30 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { toast } from "sonner"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
 } from "@/components/ui/select"
-import { useState } from "react"
 import { SelectValue } from "@radix-ui/react-select"
+import { handleSubmit } from "@/actions/contact-action"
 
-export default function ContactSection() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    service: "",
-    message: "",
-  })
-
-  const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
-  ) => {
-    const { name, value } = e.target
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }))
-  }
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle form submission logic here
-    console.log("Form submitted:", formData)
+export default function ContactSection(formData: FormData) {
+  const FormAction = async (formData: any) => {
+    const res = await handleSubmit(formData)
+    switch (res.status) {
+      case 200:
+        toast.success(res.message)
+        break
+      case 500:
+        res.message.map((msg: string) => toast.error(msg)) as string[]
+        break
+      default:
+        toast.info("Error al enviar el mensaje")
+        break
+    }
   }
 
   return (
@@ -60,7 +50,7 @@ export default function ContactSection() {
         <div className="md:w-1/2 mds:w-5/6 services_sm:w-[95%]">
           <form
             autoComplete="off"
-            onSubmit={handleSubmit}
+            action={FormAction}
             className="bg-white rounded-lg shadow-lg p-8"
           >
             <h3 className="text-2xl font-semibold mb-6">
@@ -78,8 +68,6 @@ export default function ContactSection() {
                   type="text"
                   id="name"
                   name="name"
-                  value={formData.name}
-                  onChange={handleChange}
                   placeholder="Ej: Juan Doe"
                   required
                 />
@@ -95,9 +83,22 @@ export default function ContactSection() {
                   type="email"
                   id="email"
                   name="email"
-                  value={formData.email}
-                  onChange={handleChange}
                   placeholder="Ej: nombre@gmail.com"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="enterprise"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
+                  Empresa
+                </label>
+                <Input
+                  type="text"
+                  id="enterprise"
+                  name="enterprise"
+                  placeholder="Ingrese la empresa"
                   required
                 />
               </div>
@@ -112,9 +113,7 @@ export default function ContactSection() {
                   type="tel"
                   id="phone"
                   name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  placeholder="Ej: +56 9 1234 5678"
+                  placeholder="Ej: 11 1234 5678"
                   required
                 />
               </div>
@@ -125,14 +124,7 @@ export default function ContactSection() {
                 >
                   Tipo de Servicio
                 </label>
-                <Select
-                  name="service"
-                  value={formData.service}
-                  onValueChange={(value) =>
-                    setFormData((prev) => ({ ...prev, service: value }))
-                  }
-                  required
-                >
+                <Select name="service" required>
                   <SelectTrigger>
                     <SelectValue placeholder="Selecciona el tipo de servicio" />
                   </SelectTrigger>
@@ -152,8 +144,6 @@ export default function ContactSection() {
                 <Textarea
                   id="message"
                   name="message"
-                  value={formData.message}
-                  onChange={handleChange}
                   placeholder="Escribe tu mensaje aquí..."
                   rows={4}
                   required

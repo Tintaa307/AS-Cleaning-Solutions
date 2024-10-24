@@ -13,34 +13,23 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import { ArrowLeft } from "lucide-react"
-import { useState } from "react"
+import { handleSubmit } from "@/actions/contact-action"
+import { toast } from "sonner"
 
 export default function ContactForm() {
-  const [formData, setFormData] = useState({
-    name: "",
-    company: "",
-    email: "",
-    phone: "",
-    service: "",
-    message: "",
-  })
-
-  const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
-  ) => {
-    const { name, value } = e.target
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }))
-  }
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle form submission logic here
-    console.log("Form submitted:", formData)
+  const FormAction = async (formData: any) => {
+    const res = await handleSubmit(formData)
+    switch (res.status) {
+      case 200:
+        toast.success(res.message)
+        break
+      case 500:
+        res.message.map((msg: string) => toast.error(msg)) as string[]
+        break
+      default:
+        toast.info("Error al enviar el mensaje")
+        break
+    }
   }
 
   return (
@@ -60,7 +49,7 @@ export default function ContactForm() {
           <h2 className="text-xl font-semibold mb-6">
             Pongámonos en contacto.
           </h2>
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form action={FormAction} className="space-y-4">
             <div>
               <label
                 htmlFor="name"
@@ -72,25 +61,21 @@ export default function ContactForm() {
                 type="text"
                 id="name"
                 name="name"
-                value={formData.name}
-                onChange={handleChange}
                 placeholder="Ingrese su nombre completo"
                 required
               />
             </div>
             <div>
               <label
-                htmlFor="company"
+                htmlFor="enterprise"
                 className="block text-sm font-medium text-gray-700 mb-1"
               >
                 Empresa
               </label>
               <Input
                 type="text"
-                id="company"
-                name="company"
-                value={formData.company}
-                onChange={handleChange}
+                id="enterprise"
+                name="enterprise"
                 placeholder="Ingrese la empresa"
               />
             </div>
@@ -105,8 +90,6 @@ export default function ContactForm() {
                 type="email"
                 id="email"
                 name="email"
-                value={formData.email}
-                onChange={handleChange}
                 placeholder="Ej: ejemplo@a&s.com"
                 required
               />
@@ -122,9 +105,7 @@ export default function ContactForm() {
                 type="tel"
                 id="phone"
                 name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                placeholder="Ej: (+56) 9 1234 5678"
+                placeholder="Ej: 11 1234 5678"
                 required
               />
             </div>
@@ -135,14 +116,7 @@ export default function ContactForm() {
               >
                 Tipo de Servicio*
               </label>
-              <Select
-                name="service"
-                value={formData.service}
-                onValueChange={(value) =>
-                  setFormData((prev) => ({ ...prev, service: value }))
-                }
-                required
-              >
+              <Select name="service" required>
                 <SelectTrigger>
                   <SelectValue placeholder="Selecciona el tipo de servicio" />
                 </SelectTrigger>
@@ -162,8 +136,6 @@ export default function ContactForm() {
               <Textarea
                 id="message"
                 name="message"
-                value={formData.message}
-                onChange={handleChange}
                 placeholder="¿Pregunta 1? ¿Pregunta 2? ¿Pregunta 3?"
                 rows={12}
                 required
