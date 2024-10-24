@@ -36,7 +36,7 @@ export default function ServicesSection() {
                 alt={service.title}
                 width={400}
                 height={400}
-                className="w-full h-full object-cover brightness-[0.7]"
+                className="w-full h-full object-cover brightness-[0.7] mds:h-[500px]"
               />
 
               <div className="absolute w-1/2 min-h-[200px] flex items-center flex-col justify-center bg-white/10 backdrop-blur-lg rounded-md border-white/40 border text-center bottom-10 left-0 right-0 mx-auto px-6 md:w-3/4 services_sm:w-4/5 services_sm:bottom-5 services_sm:min-h-[180px]">
