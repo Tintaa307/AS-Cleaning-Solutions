@@ -127,9 +127,8 @@ export default function Navbar() {
         <div className="flex-1 py-16">
           <ul className="flex items-center justify-center text-center flex-col gap-8">
             {navItems.map((item, index) => (
-              <li key={index} className="">
+              <li onClick={() => setIsMenuOpen(false)} key={index} className="">
                 <Link
-                  onClick={() => setIsMenuOpen(false)}
                   href={item.href}
                   className="text-black text-xl font-semibold hover:underline hover:underline-offset-4 decoration-primary decoration-2 transition-all duration-150"
                 >
