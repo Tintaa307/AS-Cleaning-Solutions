@@ -74,7 +74,7 @@ export default function AboutSection() {
                 <div key={quality.number} className="p-6 rounded-lg">
                   <div className="flex items-center mb-4 mds:flex-col mds:justify-center mds:gap-4">
                     <div className="bg-blue-300 text-white rounded-full w-16 h-16 flex items-center justify-center mr-3 mds:mr-0 mds:w-24 mds:h-24">
-                      <span className="text-xl text-blue-600 font-bold">
+                      <span className="text-xl text-blue-600 font-bold mds:text-3xl">
                         {quality.number}
                       </span>
                     </div>
