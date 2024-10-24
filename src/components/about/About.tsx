@@ -44,7 +44,7 @@ const qualities = [
 
 export default function AboutSection() {
   return (
-    <section id="About" className="py-16 ">
+    <section id="About" className="py-16 scroll-m-20">
       <div className="container mx-auto px-4 custom:max-w-full">
         <h2 className="text-2xl font-bold mb-8 text-center">
           Ya confiaron en nosotros:

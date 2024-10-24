@@ -37,7 +37,7 @@ export default function ContactForm() {
       <div className="flex flex-col md:flex-row items-start md:items-center mb-12">
         <Link
           href="/"
-          className="flex items-center text-blue-600 hover:text-blue-800 mb-4 md:mb-0"
+          className="flex items-center text-primary hover:text-primary/80 mb-4 md:mb-0"
         >
           <ArrowLeft className="mr-2" size={25} />
         </Link>
@@ -141,6 +141,7 @@ export default function ContactForm() {
                 placeholder="¿Pregunta 1? ¿Pregunta 2? ¿Pregunta 3?"
                 rows={12}
                 required
+                className="resize-none"
               />
             </div>
             <Button type="submit" className="w-full">

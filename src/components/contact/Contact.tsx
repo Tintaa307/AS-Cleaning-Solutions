@@ -31,7 +31,7 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="Contact" className="relative">
+    <section id="Contact" className="relative scroll-m-20">
       <div className="absolute inset-0">
         <Image
           src="/contact-image.png"
@@ -147,6 +147,7 @@ export default function ContactSection() {
                   placeholder="Escribe tu mensaje aquí..."
                   rows={4}
                   required
+                  className="resize-none"
                 />
               </div>
             </div>

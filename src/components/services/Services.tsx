@@ -19,7 +19,7 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section id="Services" className="py-16 bg-white">
+    <section id="Services" className="py-16 bg-white scroll-m-20">
       <div className="container mx-auto px-4 custom:max-w-full">
         <h2 className="text-4xl font-bold mb-12 text-center services_sm:text-3xl">
           Servicios de Limpieza a tu Medida
