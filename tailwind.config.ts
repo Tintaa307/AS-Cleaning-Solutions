@@ -80,6 +80,7 @@ const config: Config = {
         hero: { max: "830px" },
         services_sm: { max: "536px" },
         hero_lg: { max: "1600px" },
+        xs: { max: "400px" },
       },
     },
   },
