@@ -13,19 +13,25 @@ import {
 } from "@/components/ui/select"
 import { SelectValue } from "@radix-ui/react-select"
 import { handleSubmit } from "@/actions/contact-action"
+import { useState } from "react"
 
 export default function ContactSection() {
+  const [isLoading, setIsLoading] = useState(false)
   const FormAction = async (formData: FormData) => {
+    setIsLoading(true)
     const res = await handleSubmit(formData)
     switch (res.status) {
       case 200:
         toast.success(res.message)
+        setIsLoading(false)
         break
       case 500:
         res.message.map((msg: string) => toast.error(msg)) as string[]
+        setIsLoading(false)
         break
       default:
         toast.info("Error al enviar el mensaje")
+        setIsLoading(false)
         break
     }
   }
@@ -152,7 +158,7 @@ export default function ContactSection() {
               </div>
             </div>
             <Button type="submit" className="w-full mt-6">
-              Enviar
+              {isLoading ? "Enviando..." : "Enviar"}
             </Button>
           </form>
         </div>
