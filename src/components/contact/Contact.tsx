@@ -95,21 +95,6 @@ export default function ContactSection() {
               </div>
               <div>
                 <label
-                  htmlFor="enterprise"
-                  className="block text-sm font-medium text-gray-700 mb-1"
-                >
-                  Empresa
-                </label>
-                <Input
-                  type="text"
-                  id="enterprise"
-                  name="enterprise"
-                  placeholder="Ingrese la empresa"
-                  required
-                />
-              </div>
-              <div>
-                <label
                   htmlFor="phone"
                   className="block text-sm font-medium text-gray-700 mb-1"
                 >
@@ -122,23 +107,6 @@ export default function ContactSection() {
                   placeholder="Ej: 11 1234 5678"
                   required
                 />
-              </div>
-              <div>
-                <label
-                  htmlFor="service"
-                  className="block text-sm font-medium text-gray-700 mb-1"
-                >
-                  Tipo de Servicio
-                </label>
-                <Select name="service" required>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Selecciona el tipo de servicio" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="limpieza">Limpieza</SelectItem>
-                    <SelectItem value="fumigacion">Fumigación</SelectItem>
-                  </SelectContent>
-                </Select>
               </div>
               <div>
                 <label
