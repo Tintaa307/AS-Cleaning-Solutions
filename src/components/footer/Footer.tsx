@@ -13,9 +13,9 @@ export default function Footer() {
               <Image
                 src="/logo-as-2.png"
                 alt="A&S Cleaning Solutions"
-                width={220}
+                width={200}
                 height={60}
-                className="custom:size-[180px]"
+                className="custom:w-[150px]"
               />
             </Link>
           </div>
