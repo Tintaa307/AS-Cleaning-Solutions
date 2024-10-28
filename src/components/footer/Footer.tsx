@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="w-full md:w-1/4 mb-6 md:mb-0 flex">
             <Link href="/" className="inline-block">
               <Image
-                src="/Logo-AS-1.svg"
+                src="/logo-as-2.png"
                 alt="A&S Cleaning Solutions"
                 width={220}
                 height={60}
