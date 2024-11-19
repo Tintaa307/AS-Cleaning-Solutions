@@ -29,7 +29,7 @@ export const handleSubmit = async (formData: FormData) => {
     const res = await axios.post(
       process.env.NODE_ENV === "development"
         ? "http://localhost:3000/api/emails"
-        : "https://solutionsas.com.ar.com/api/emails",
+        : "https://solutionsas.com.ar/api/emails",
       result
     )
 
@@ -71,7 +71,7 @@ export const handleSubmitService = async (formData: FormData) => {
     const res = await axios.post(
       process.env.NODE_ENV === "development"
         ? "http://localhost:3000/api/emails"
-        : "https://solutionsas.com.ar.com/api/emails",
+        : "https://solutionsas.com.ar/api/emails",
       result
     )
 
