@@ -21,3 +21,7 @@ export const ContactSchema = z.object({
     message: "Selecciona un servicio",
   }),
 })
+
+export const ContactSchemaWithoutService = ContactSchema.omit({
+  service: true,
+}).omit({ enterprise: true })

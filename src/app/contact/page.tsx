@@ -13,12 +13,12 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import { ArrowLeft } from "lucide-react"
-import { handleSubmit } from "@/actions/contact-action"
+import { handleSubmitService } from "@/actions/contact-action"
 import { toast } from "sonner"
 
 export default function ContactForm() {
   const FormAction = async (formData: any) => {
-    const res = await handleSubmit(formData)
+    const res = await handleSubmitService(formData)
     switch (res.status) {
       case 200:
         toast.success(res.message)
