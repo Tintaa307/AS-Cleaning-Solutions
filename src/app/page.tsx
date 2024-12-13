@@ -1,5 +1,4 @@
 import AboutSection from "@/components/about/About"
-import ContactSection from "@/components/contact/Contact"
 import Footer from "@/components/footer/Footer"
 import HeroSection from "@/components/hero/HeroSection"
 import Navbar from "@/components/navbar/Navbar"
@@ -12,7 +11,7 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <ServicesSection />
-      <ContactSection />
+      {/* <ContactSection /> */}
       <Footer />
     </>
   )
