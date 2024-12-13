@@ -24,10 +24,10 @@ export default function Navbar() {
       title: "Servicios",
       href: "#Services",
     },
-    {
-      title: "Trabaja con Nosotros",
-      href: "#Contact",
-    },
+    // {
+    //   title: "Trabaja con Nosotros",
+    //   href: "#Contact",
+    // },
   ]
 
   useEffect(() => {
