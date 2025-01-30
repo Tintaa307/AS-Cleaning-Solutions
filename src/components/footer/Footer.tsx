@@ -74,11 +74,11 @@ export default function Footer() {
               <li>
                 <Link
                   target="_blank"
-                  href="#"
+                  href="mailto:contacto@cleaningas.com?subject=Consulta&body=Hola,%20quisiera%20más%20información."
                   className="text-gray-600 hover:text-blue-600 flex items-center"
                 >
                   <IconMail size={22} className="mr-2" />
-                  @cleaningas.com
+                  contacto@cleaningas.com
                 </Link>
               </li>
               <li>
