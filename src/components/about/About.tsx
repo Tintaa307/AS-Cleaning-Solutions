@@ -13,6 +13,8 @@ const clientLogos = [
   { name: "Logo 4", src: "/trusted-by/alliance-4.png?height=100&width=100" },
   { name: "MMOR", src: "/trusted-by/alliance-5.png?height=100&width=100" },
   { name: "REM", src: "/trusted-by/alliance-6.png?height=100&width=100" },
+  { name: "Fixvet", src: "/trusted-by/alliance-7.png?height=100&width=100" },
+  { name: "MTU", src: "/trusted-by/alliance-8.png?height=100&width=100" },
 ]
 
 const qualities = [
