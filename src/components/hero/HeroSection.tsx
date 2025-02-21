@@ -13,7 +13,7 @@ const HeroSection = () => {
             Soluciones integrales para <br />
             ambientes profesionales
           </h1>
-          <Link href={"#Contact"}>
+          <Link href={"/contact"}>
             <Button className="text-lg h-14 px-5 mds:h-12 mt-4">
               Contáctate con nosotros
             </Button>

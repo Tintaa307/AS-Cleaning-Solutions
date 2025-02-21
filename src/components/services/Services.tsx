@@ -52,7 +52,7 @@ export default function ServicesSection() {
         </div>
 
         <div className="text-center">
-          <Link href={"#Contact"}>
+          <Link href={"/contact"}>
             <Button size="lg" className="text-md">
               Quiero saber más
             </Button>

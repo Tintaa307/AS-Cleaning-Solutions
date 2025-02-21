@@ -88,7 +88,7 @@ export default function AboutSection() {
             </div>
 
             <div className="flex-1 flex items-center justify-center">
-              <Link href={"#Contact"}>
+              <Link href={"/contact"}>
                 <Button size="lg" className="mt-8 text-md">
                   Contáctanos
                 </Button>
